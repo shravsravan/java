@@ -1,0 +1,19 @@
+public class IntegerDivision {
+
+	public static void main(String[] args) {
+
+		int dividend = 100;
+		int divisor = 5;
+		int quotient = dividend / divisor;
+
+		//Dividend completely divides the divisor
+		System.out.println(dividend + " / " + divisor + " = " + quotient);
+
+		dividend = 143;
+		divisor = 11;
+		quotient = dividend / divisor;
+
+		//Dividend completely divides the divisor
+		System.out.println(dividend + " / " + divisor + " = " + quotient);
+	}
+}
