@@ -1,0 +1,103 @@
+public class CountRangeSum   
+{  
+// a method that computes the count of ranges (subarrays) whose  
+// sum lies in the range left and right (left and right inclusive)  
+public int findCountRangeSum(int numArr[], int size, int left, int right)  
+{  
+long tmp = 0;  
+int count = 0;  
+  
+// Checking all of the subarrays  
+// that can be made from the input array numArr[]  
+for (int j = 0; j < size; j++)  
+{  
+tmp = 0;  
+for (int i = j; i < size; i++)  
+{  
+// the sub-array starts from the jth index and   
+// goes till the ith index  
+// as the ith index changes in each iteration, the size of the sub   
+// array also changes, and hence, the sum also changes in each iteration  
+// and these changes are reflected or kept in the tmp variable  
+tmp = tmp + numArr[i];  
+  
+// If the sum is present within the range, then increment the count by 1  
+if(tmp >= left && tmp <= right)  
+{  
+count = count + 1;  
+}  
+}  
+}  
+return count;  
+}  
+  
+// main method  
+public static void main(String argvs[])  
+{  
+// creating an object of the class CountRangeSum  
+CountRangeSum obj = new CountRangeSum();  
+  
+// input array  
+int numArr[] = {1, 2, 3, 4, 5, 6, 7};  
+  
+// computing its size  
+int size = numArr.length;  
+  
+// defining the ranges, i.e, the left and the right boundary   
+int left = 2;  
+int right = 7;  
+  
+// invoking the method findCountRangeSum() and storing the answer  
+int ans = obj.findCountRangeSum(numArr, size, left, right);  
+  
+System.out.println("For the input array: ");  
+  
+for(int i = 0; i < size; i++)  
+{  
+System.out.print(numArr[i] + " ");      
+}  
+System.out.println();  
+  
+if(ans != 0)  
+{  
+System.out.print("The number of ranges whose sum lies between "+ left + " & " + right + " is " + ans + ".");  
+}  
+else  
+{  
+System.out.print("There is no range whose sum lies between "+ left + " & " + right + ".");      
+}  
+  
+System.out.println("\n");  
+  
+// input array  
+int numArr1[] = {11, 12, 13, 14, 15, 16, 17};  
+  
+// computing its size  
+size = numArr1.length;  
+  
+// defining the ranges, i.e, the left and the right boundary   
+left = 9;  
+right = 10;  
+  
+// invoking the method findCountRangeSum() and storing the answer  
+ans = obj.findCountRangeSum(numArr1, size, left, right);  
+  
+System.out.println("For the input array: ");  
+  
+for(int i = 0; i < size; i++)  
+{  
+System.out.print(numArr1[i] + " ");      
+}  
+System.out.println();  
+  
+if(ans != 0)  
+{  
+System.out.print("The number of ranges whose sum lies between "+ left + " & " + right + " is " + ans + ".");  
+}  
+else  
+{  
+System.out.print("There is no range whose sum lies between "+ left + " & " + right + ".");      
+}  
+}  
+  
+} 
