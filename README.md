@@ -19,3 +19,5 @@ Day7: Slicing
 Day8: Integer division
 
 Day9: String Manipulation Operators
+
+Day 10 : Sum and Range Functions
