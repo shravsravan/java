@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListAddExamples {
+
+	public static void main(String[] args) {
+
+		List<String> vowels = new ArrayList<>();
+
+		vowels.add("A"); // [A]
+		vowels.add("E"); // [A, E]
+		vowels.add("U"); // [A, E, U]
+
+		System.out.println(vowels); // [A, E, U]
+
+		vowels.add(2, "I"); // [A, E, I, U]
+		vowels.add(3, "O"); // [A, E, I, O, U]
+
+		System.out.println(vowels); // [A, E, I, O, U]
+	}
+}
