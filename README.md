@@ -21,3 +21,5 @@ Day8: Integer division
 Day9: String Manipulation Operators
 
 Day 10 : Sum and Range Functions
+
+Day 11 : Append Function for Lists
