@@ -23,3 +23,5 @@ Day9: String Manipulation Operators
 Day 10 : Sum and Range Functions
 
 Day 11 : Append Function for Lists
+
+Day 12 : Test of prefix and postfix increment operators
