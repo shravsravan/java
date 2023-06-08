@@ -6,3 +6,4 @@
 5:Creating variable
 6:Java Strings
 7:Concatenation
+8:Casting
